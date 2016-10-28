@@ -1,0 +1,43 @@
+#profile_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#profile_menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 350px;
+}
+
+#profile_menu ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 100%;
+}
+
+#profile_menu ul li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+#profile_menu ul li a {
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  color: #ffffff;
+  background: #ff3232;
+  width: 100%;
+  border: 2px solid #d8d8d8;
+}
+
+#profile_menu ul li a:hover {
+  background: #ffffff;
+  color: #3f888f;
+}

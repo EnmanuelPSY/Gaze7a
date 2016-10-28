@@ -1,0 +1,18 @@
+<% include ../partials/header %>
+
+		<div id="contact_form">
+			<form action="/users/signup" method='POST'>
+				<p>Sign up</p>
+				<input id="username" type="text" name='username' placeholder='Username'>
+				<input id="nombre" type="text" name='name' placeholder='Name'>
+				<input id="email" type="email" name='email' placeholder='Email'>
+				<input id="password" type="password" name='password' placeholder='Password'>
+
+				<input id="submit" type="submit" value="Login"/>
+				<button id='cancel'><a href="/">Cancelar</a></button>
+			</form>
+		</div>
+  </div>
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,51 @@
+<% include ../partials/header %>
+
+<div id="new_container">
+	<form id='form_newpost' action="/blog/<%= post.id %>/edit?_method=PUT" method='POST' enctype="multipart/form-data" name="upload">
+
+		<p>Editar articulo</p>
+
+		<div id='editor'>
+
+		<label for="content"></label>
+		<textarea name="content" id="content"><%= post.content %></textarea>
+		</div>
+
+		<div id='inputs'>
+
+		<div id='image_edit'>
+			<img src="<%= post.image %>" alt="">
+		</div>
+
+		<div class="fileUpload btn btn-primary">
+			<span>Subir foto</span>
+			<input type="file" name="theFile" class="upload">
+		</div>
+
+		<label for="image"></label>
+		<textarea type="text" id='image' name='image' value=''><%= post.image %></textarea>
+
+		<label for="created_at"></label>
+		<input type="text" id='created_at' name='created_at' value='<%= post.created_at %>'>
+
+		<label for="title"></label>
+		<input type="text" id='title' name='title' value='<%= post.title %>'>
+		</div>
+
+		<select name="category" id="category">
+			<% categories.forEach(function(category) { %>
+				<option value="<%= category.name %>"><%= category.name %></option>
+			<% }) %>
+		</select>
+
+		<input type='submit' value='Actualizar' id="submit">
+		<button id='cancel'><a href="/blog">Cancelar</a></button>
+
+	</form>
+
+	<script>
+		CKEDITOR.replace('content');
+		//$('#content').ckeditor();
+	</script>
+</div>
+<% include ../partials/footer %>

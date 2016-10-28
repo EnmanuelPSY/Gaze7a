@@ -1,0 +1,43 @@
+<% include ../partials/header %>
+
+<div id="new_container">
+	<form id='form_newpost' action="/blog/post/new" method='POST' enctype="multipart/form-data" name="upload">
+		<p>Crear nuevo articulo</p>
+
+		<div id='editor'>
+			<div>
+				<div>
+				<label for="content"></label>
+				<textarea name="content" id="content"></textarea>
+				</div>
+			</div>
+		</div>
+
+		<div id='inputs'>
+
+		<select name="category" id="category_posts">
+			<% categories.forEach(function(category) { %>
+				<option value="<%= category.name %>"><%= category.name %></option>
+			<% }) %>
+		</select>
+
+		<div class="fileUpload btn btn-primary">
+			<span>Subir foto</span>
+			<input type="file" name="theFile" class="upload">
+		</div>
+		<textarea type="text" id='image' name='image' placeholder='Ingresar Imagen URL' rows = "5"></textarea>
+
+		<label for="title"></label>
+		<input type="text" id='title' name='title' placeholder='Titulo del articulo'>
+
+		</div>
+		<input type='submit' value='Crear' id="submit_new">
+	</form>
+
+	<script>
+		CKEDITOR.replace('content');
+		//$('#content').ckeditor();
+	</script>
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+
+    <div id="contact_form">
+      <form method="post" action="/enviado" autocomplete="on">
+        <p>Contactanos</p>
+        <input id="nombre" type="text" name="name" placeholder="Nombre" required="required"/>
+        <input id="email" type="email" name="email" placeholder="Email" required="required"/>
+        <Input id="asunto" type="text" name="asunto" placeholder="Asunto"></Input>
+        <textarea id="mensaje" rows="7" name="message" placeholder="Mensaje" required="required"></textarea>
+        <input id="submit" type="submit" value="ENVIAR"/>
+      </form>
+    </div>
+
+
+
+<% include ../partials/footer %>

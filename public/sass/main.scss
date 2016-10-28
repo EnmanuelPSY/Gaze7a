@@ -1,0 +1,53 @@
+
+//Neutral-colors
+$white: #ffffff;
+$red: red;
+
+//******************************
+//LAYOUT COLOR//////////////////
+//******************************
+//nav
+$nav-font-color: #767676;
+$nav-font-hover-color: #d8d8d8;
+
+//side_nav
+$sidenav-bg-color: rgba(63, 136, 143,0.3);
+$sidenav-title-color: orange;
+$sidenav-li-bordertop-color: #78abb0;
+
+//******************************
+//LAYOUT COLOR//////////////////
+//*****************************/
+
+//FORM
+$input-border-color: #d8d8d8;
+$input-text-form: #3f888f;
+
+//header-colors
+$header-color: #3f888f;
+
+
+//blog-page-color
+$title-blog: #767676;
+
+//Buttom-colors ***********
+$buttom-effect-one: #ff3232;
+$buttom-effect-two: #d8d8d8;
+$buttom-bg-fileupload: rgb(43,87,154);
+
+//pagination ********************
+
+$pagination-font-color: #767676;
+$pagination-border-color: #d8d8d8;
+
+//Footer ******************
+$footer-font-hover-color: #ff3232;
+$footer-font-color: #767676;
+
+
+//@ media *****************
+$sidenav-bg-color-media: rgba(63, 136, 143,0.8);
+$sidenav-li-border-color-media: grey;
+$sidenav-li-font-color-media: aliceblue;
+
+@import "layout", "blog", "contacto", "newpost", "profile";

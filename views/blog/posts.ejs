@@ -1,0 +1,48 @@
+
+<% include ../partials/header %>
+    <div id='wrapper'>
+	<% posts.forEach(function(post) { %>
+		<div id='container-noticias'>
+			<div class='noticia_1'>
+				<div class='noticia_1_imagen'>
+					<img src="<%= post.image %>" alt="">
+				</div>
+
+				<div class='noticia_1_contenido'>
+					<div id='bot_title'>
+						<p><%= post.title %></p>
+					</div>
+					<!-- <div id='bot_date'>
+						<h6><%= post.created_at %></h6>
+					</div> -->
+				</div>
+				<% if (user) { %>
+				<form action="/blog/post/<%= post._id %>?_method=DELETE" method='POST'>
+					<button id='editar'><a href="/blog/post/<%= post._id %>">Ver</a></button>
+					<button id='editar'><a href="/blog/post/<%= post._id %>/edit">Editar</a></button>
+					<!--<input id="submit" type="submit" value='Borrar'> -->
+				</form>
+				<% } else { %>
+				<form>
+					<button id='editar'><a href="/blog/post/<%= post._id %>">Ver</a></button>
+				</form>
+				<% } %>
+			</div>
+		</div>
+	<% }) %>
+    </div>
+  </div>
+</div>
+<div id='content_pagination'>
+  <ul>
+    <% for (i=0; i < pagination.length; i++) { %>
+      <% if (((id == 00) && (i == 0)) || ((id == 01) && (i == 1))) { %>
+      <li><a style="color: red; border-top: 2px solid red"><%= pagination[i]  %></a></li>
+      <% } else { %>
+      <li><a href="./0<%= i %>"><%= pagination[i]  %></a></li>
+      <% } %>
+    <% } %>
+  </ul>
+</div>
+
+<% include ../partials/footer %>

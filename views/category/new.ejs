@@ -1,0 +1,15 @@
+<% include ../partials/header %>
+<div id='content_frame'>
+<div id="category_content">
+	<p>Agregar nueva categoria</p>
+	<form id="category_form" action="/category/new" method='POST'>
+		
+		<label for="name"></label>
+		<input type="text" id='name' name='name' placeholder='Nombre de la categoria'>
+
+		<input type='submit' value='Crear' id="submit">
+		<button id='cancel'><a href="/blog/profile">Cancelar</a></button>
+	</form>
+</div>
+</div>
+<% include ../partials/footer %>

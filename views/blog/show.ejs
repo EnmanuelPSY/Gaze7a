@@ -1,0 +1,44 @@
+<% include ../partials/header %>
+<div id='content_frame'>
+	<h1><%= post.title %></h1>
+	<!-- <img src='<%= post.image %>' alt='<%= post.title %>'> -->
+	<div id='show_article'>
+	<%- post.content %>
+	</div>
+	<div style='margin: 40px 0px'>
+		
+	</div>
+	<div>
+		<form action="/blog/post/<%= post._id %>?_method=DELETE" method='POST'>
+		<% if (!user) { %>
+		<button id='cancel'><a href="/blog/">Atras</a></button>	
+		<% } else { %>
+		<button id='cancel'><a href="/blog/">Atras</a></button>
+		<button id='editar'><a href="/blog/post/<%= post._id %>/edit">Editar</a></button>
+		<input id="submit" type="submit" value='Borrar'>
+		<% } %>
+		</form>
+	</div>
+
+</div>
+	<div id='fb_like'>
+		<div class="fb-like" 
+		data-href="http://gaze7a.herokuapp.com/blog/post/" 
+		data-layout="button" 
+		data-action="like" 
+		data-size="large" 
+		data-show-faces="true" 
+		data-share="true"
+		data-colorscheme="light"
+		>
+		</div>
+	</div>
+	<div class="fb-comments"
+	     data-href="http://gaze7a.herokuapp.com/blog/post/"
+	     data-numposts="10"
+	     data-width="100%"
+	     data-colorscheme="light">
+	 </div>
+
+
+<% include ../partials/footer %>

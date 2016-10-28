@@ -1,0 +1,146 @@
+#contact_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 500px;
+}
+
+p {
+  font-size: 2em;
+  color: #3f888f;
+  margin-bottom: 15px;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+}
+
+/* Change the white to any color ;) */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  -webkit-text-fill-color: #3f888f !important;
+}
+
+#nombre, #email, #asunto, #mensaje, #username, #password {
+  width: 100%;
+  margin-top: 15px;
+  padding: 15px;
+  border: none;
+  border-bottom: 2px solid #d8d8d8;
+  font-size: 1.1em;
+  color: #3f888f;
+}
+
+#mensaje {
+  resize: none;
+}
+
+#submit {
+  cursor: pointer;
+  padding: 13px 18px;
+  background: #ff3232;
+  color: #ffffff;
+  border: 2px solid #ff3232;
+  margin-top: 15px;
+}
+
+#submit:hover {
+  background: #ffffff;
+  color: #ff3232;
+  border: 2px solid #d8d8d8;
+}
+
+#cancel, #editar {
+  margin-top: 15px;
+  border: none;
+}
+
+#cancel a, #editar a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 13px 18px;
+  background: #ff3232;
+  border: 2px solid #ff3232;
+}
+
+#cancel a:hover, #editar a:hover {
+  background: #ffffff;
+  color: #ff3232;
+  border: 2px solid #d8d8d8;
+}
+
+@media screen and (max-device-width: 480px) {
+  form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+  p {
+    font-size: 4.5em;
+    color: #3f888f;
+    margin-bottom: 15px;
+  }
+  textarea:focus, input:focus {
+    outline: none;
+  }
+  /* Change the white to any color ;) */
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    -webkit-text-fill-color: #3f888f !important;
+  }
+  #nombre, #email, #asunto, #mensaje, #username, #password {
+    width: 100%;
+    margin-top: 40px;
+    padding: 15px;
+    border: none;
+    border-bottom: 2px solid #d8d8d8;
+    font-size: 3.7em;
+    color: #3f888f;
+  }
+  #mensaje {
+    resize: none;
+  }
+  #submit {
+    cursor: pointer;
+    padding: 33px 38px;
+    background: #ff3232;
+    color: #ffffff;
+    border: 2px solid #ff3232;
+    margin-top: 15px;
+    font-size: 2em;
+    font-family: none;
+  }
+  #submit:hover {
+    background: #ffffff;
+    color: #ff3232;
+    border: 2px solid #d8d8d8;
+  }
+  #cancel, #editar {
+    margin-top: 15px;
+    border: none;
+  }
+  #cancel a, #editar a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 33px 38px;
+    background: #ff3232;
+    border: 2px solid #ff3232;
+    font-size: 2.35em;
+  }
+  #cancel a:hover, #editar a:hover {
+    background: #ffffff;
+    color: #ff3232;
+    border: 2px solid #d8d8d8;
+  }
+}

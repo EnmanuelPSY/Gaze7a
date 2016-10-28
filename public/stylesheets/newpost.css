@@ -1,0 +1,203 @@
+#new_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#new_container #form_newpost {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#new_container #form_newpost img {
+  height: 400px;
+  width: 330px;
+}
+
+#new_container #form_newpost #image_edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#new_container #form_newpost #image2 {
+  width: 25%;
+  margin: 25px;
+  padding: 15px;
+  border: 2px solid #d8d8d8;
+  font-size: 1.1em;
+  color: #3f888f;
+}
+
+#new_container #form_newpost textarea {
+  resize: none;
+}
+
+#new_container #form_newpost p {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#new_container #editor {
+  width: 60%;
+}
+
+#new_container #editor div {
+  width: 95%;
+}
+
+#new_container #editor div div {
+  width: 100%;
+}
+
+#new_container #inputs {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  width: 40%;
+}
+
+#new_container #submit_new, #new_container #submit_actualizar {
+  cursor: pointer;
+  padding: 13px 50px;
+  background: #ff3232;
+  color: #ffffff;
+  border: 2px solid #ff3232;
+  margin-top: 15px;
+}
+
+#new_container #submit_new:hover, #new_container #submit_actualizar:hover {
+  background: #ffffff;
+  color: #ff3232;
+  border: 2px solid #d8d8d8;
+}
+
+#title, #image, #name, #category_posts {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #d8d8d8;
+  font-size: 1.1em;
+  color: #3f888f;
+}
+
+#category, #category_name {
+  width: 100%;
+  margin-top: 25px;
+  padding: 15px;
+  border: 2px solid #d8d8d8;
+  font-size: 1.1em;
+  color: #3f888f;
+}
+
+#created_at {
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 15px;
+  border: 2px solid #d8d8d8;
+  font-size: 1.1em;
+  color: #3f888f;
+}
+
+#image {
+  margin-bottom: 25px;
+}
+
+#content_frame {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#content_frame h1 {
+  font-size: 2.5em;
+  color: #ff3232;
+}
+
+#content_frame p {
+  color: #326c72;
+  font-size: 1.5em;
+}
+
+#category_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+#category_content #category_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#category_content_2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  text-align: center;
+}
+
+#category_content_2 #category_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#show_article {
+  text-align: justify;
+}
+
+.fb_iframe_widget,
+.fb_iframe_widget span,
+.fb_iframe_widget span iframe[style] {
+  min-width: 100% !important;
+  width: 100% !important;
+}
+
+#fb_like {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid #d8d8d8;
+  background: #2b579a;
+}
+
+.fileUpload input.upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.fileUpload span {
+  font-size: 2em;
+  color: #ffffff;
+}

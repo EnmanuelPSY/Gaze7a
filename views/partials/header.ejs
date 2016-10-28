@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Gaze7a</title>
+    <link rel="stylesheet" href="/stylesheets/main.css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src='/ckeditor/ckeditor.js'></script>
+	</head>
+
+  <body>
+    <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '346840328992820',
+          xfbml      : true,
+          version    : 'v2.8'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/es_LA/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <div class="blog">
+      <div id="close_icon"><img src="/images/close_icon.png" alt=""></div>
+      <div id="close_icon2"><img src="/images/close_icon2.png" alt=""></div>
+        <ul>
+          <span>Noticias</span>
+          <% posts.forEach(function(post) { %>
+
+              <li><a href="/blog/post/<%= post._id %>"><%= post.title %></a></li>
+
+          <% }) %>
+        </ul>
+    </div>
+    <div id="body">
+
+      <% if (typeof id !== 'undefined' && id == 00) { %>
+      <div class="left">
+        <a href="./0<%= Number(pagination.length - 1) %>"><img src="/images/arrow.png" alt="" /></a>
+      </div>
+      <div class="right">
+        <a href="./0<%= Number(id) + 1 %>"><img src="/images/arrow.png" alt="" /></a>
+      </div>
+      <% } else if (typeof id !== 'undefined' && id > 00) { %>
+      <div class="left">
+        <a href="./0<%= Number(id) - 1 %>"><img src="/images/arrow.png" alt="" /></a>
+      </div>
+      <div class="right">
+        <a href="./0<%= Number(id) + 1 %>"><img src="/images/arrow.png" alt="" /></a>
+      </div>
+      <% } %>
+      <div id="container">
+        <div id="container-header">
+          <header>
+            <div id="side_nav"><img id="toggle-nav" src="/images/nav_ico.png" alt=""></div>
+            <div id="space"></div>
+            <div id="header">
+              <img src="/images/logo.jpg" alt="">
+              <!--<h1>G<span>A</span>ZE<span>7</span>A</h1> -->
+            </div>
+            <div id="socialmedia"><img id="facebook" src="/images/facebook.png" alt="facebook"><img id="twitter" src="/images/twitter.png" alt="twitter"><img id="instagram" src="/images/instagram.png" alt="instagram"></div>
+          </header>
+          <nav>
+            <ul>
+	            <li><a href="/blog">Blog</a></li>
+	            <li><a href="/acerca-de">Acerca de</a></li>
+	            <!--<li><a href="/portafolio">Potafolio</a></li> -->
+	            <li><a href="/contacto">Contacto</a></li>
+				<% if (user) { %>
+          <li><a href="/blog/profile">Aplicacion</a></li>
+					<li><a href="/users/logout">Logout: <%= user.username.charAt(0).toUpperCase() + user.username.slice(1) %></a></li>
+				<% } else { %>
+					<li><a href="/users/login">Login</a></li>
+					<!--<li><a href="/users/signup">Signup</a></li>-->
+				<% } %>
+            </ul>
+          </nav>
+        </div>

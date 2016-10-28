@@ -1,0 +1,14 @@
+<% include ../partials/header %>
+<div id='content_frame'>
+	<div id="category_content_2">
+		<p>Categorias</p>
+		<% categories.forEach(function(category) { %>
+			<form id="category_form" action="/category/<%= category._id %>?_method=DELETE" method='category'>
+				<div id="category_name"><h3><span>Categoria: </span><%= category.name %></h3>
+				<button id='cancel'><a href="/category/<%= category._id %>/edit">Editar</a></button>
+				<input type='submit' value='Borrar' id="submit"></div>
+			</form>
+		<% }) %>
+	</div>
+</div>
+<% include ../partials/footer %>

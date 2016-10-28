@@ -1,0 +1,46 @@
+
+#profile_content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+
+}
+
+#profile_menu{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 350px;
+
+	ul{
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		width: 100%;
+		li{
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			margin-top: 25px;
+			a{
+				cursor: pointer;
+				text-align: center;
+				text-decoration: none;
+				padding: 15px;
+				color: $white;
+				background: $buttom-effect-one;
+				width: 100%;
+				border: 2px solid $buttom-effect-two;
+
+			}
+
+			a:hover{
+				background: $white;
+				color: $input-text-form;
+			}
+		}
+	}
+
+
+}

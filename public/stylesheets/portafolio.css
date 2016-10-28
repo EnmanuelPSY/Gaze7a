@@ -1,0 +1,33 @@
+#Articulo h2 {
+  color: #767676;
+  text-align: center;
+}
+
+#Articulo #contenido {
+  text-align: justify;
+  font-size: 1.5em;
+}
+
+#Articulo #contenido p {
+  color: #898989;
+}
+
+#Articulo #contenido .image-1 {
+  float: left;
+  padding: 15px;
+}
+
+#Articulo #contenido .image-2 {
+  float: right;
+  padding: 15px;
+}
+
+#Articulo #contenido .autor {
+  color: #898989;
+  font-size: 0.7em;
+}
+
+#Articulo #contenido .autor span {
+  border-top: 2px solid #ff4c4c;
+  padding-top: 10px;
+}

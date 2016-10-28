@@ -1,0 +1,15 @@
+<% include ../partials/header %>
+<div id='content_frame'>
+<div id="category_content">
+<p>Edit Category</p>
+<form action="/category/<%= category.id %>/edit?_method=PUT" method='POST'>
+	<label for="name"></label>
+	<input type="text" id='name' name='name' value='<%= category.name %>'>
+
+	<input type='submit' value='Actualizar' id="submit">
+	<button id='cancel'><a href="/category">Cancelar</a></button>
+</form>
+</div>
+</div>
+
+<% include ../partials/footer %>
