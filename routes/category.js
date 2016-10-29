@@ -53,7 +53,7 @@ router.get('/:id/edit', middlewareObj.isLoggedIn, function(req, res) {
 			req.flash('error', err.message);
 			return res.redirect('/category');
 		}
-		res.render('category/edit', { category: category, posts: posts });		
+		res.render('category/edit', { category: category, posts: posts });
 	});
 	});
 });
@@ -70,13 +70,13 @@ router.put('/:id/edit', middlewareObj.isLoggedIn, function(req, res) {
 });
 
 router.delete('/:id', middlewareObj.isLoggedIn, function(req, res) {
-	Category.findByIdAndRemove(req,params.id, function(err) {
+	Category.findByIdAndRemove(req.params.id, function(err) {
 		if (err) {
 			req.flash('error', err.message);
 			return res.redirect('/category');
 		}
 
-		res.redirect('/category');		
+		res.redirect('/category');
 	});
 });
 
