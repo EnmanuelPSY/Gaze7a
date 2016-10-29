@@ -6,12 +6,12 @@
 	<%- post.content %>
 	</div>
 	<div style='margin: 40px 0px'>
-		
+
 	</div>
 	<div>
 		<form action="/blog/post/<%= post._id %>?_method=DELETE" method='POST'>
 		<% if (!user) { %>
-		<button id='cancel'><a href="/blog/">Atras</a></button>	
+		<button id='cancel'><a href="/blog/">Atras</a></button>
 		<% } else { %>
 		<button id='cancel'><a href="/blog/">Atras</a></button>
 		<button id='editar'><a href="/blog/post/<%= post._id %>/edit">Editar</a></button>
@@ -22,19 +22,19 @@
 
 </div>
 	<div id='fb_like'>
-		<div class="fb-like" 
-		data-href="http://gaze7a.herokuapp.com/blog/post/" 
-		data-layout="button" 
-		data-action="like" 
-		data-size="large" 
-		data-show-faces="true" 
+		<div class="fb-like"
+		data-href="http://gaze7a.com"
+		data-layout="button"
+		data-action="like"
+		data-size="large"
+		data-show-faces="true"
 		data-share="true"
 		data-colorscheme="light"
 		>
 		</div>
 	</div>
 	<div class="fb-comments"
-	     data-href="http://gaze7a.herokuapp.com/blog/post/"
+	     data-href="http://gaze7a.com"
 	     data-numposts="10"
 	     data-width="100%"
 	     data-colorscheme="light">
