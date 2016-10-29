@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Gaze7a</title>
     <link rel="stylesheet" href="/stylesheets/main.css"/>
+    <link rel="stylesheet" href="/stylesheets/profile.css"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src='/ckeditor/ckeditor.js'></script>
 	</head>
@@ -77,7 +78,7 @@
 	            <!--<li><a href="/portafolio">Potafolio</a></li> -->
 	            <li><a href="/contacto">Contacto</a></li>
 				<% if (user) { %>
-          <li><a href="/blog/profile">Aplicacion</a></li>
+          <li><a href="/aplicacion">Aplicación</a></li>
 					<li><a href="/users/logout">Logout: <%= user.username.charAt(0).toUpperCase() + user.username.slice(1) %></a></li>
 				<% } else { %>
 					<li><a href="/users/login">Login</a></li>

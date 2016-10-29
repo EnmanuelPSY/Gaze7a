@@ -1,0 +1,25 @@
+#container_send{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+}
+
+#send{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 400px;
+
+}
+
+#send p{
+  text-decoration: none;
+  color: #ff3232;
+  font-weight: bold;
+  border: solid 2px #ff3232;
+  border-radius: 5px;
+  padding: 25px;
+}

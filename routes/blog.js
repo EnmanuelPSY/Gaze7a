@@ -37,16 +37,6 @@ router.get('/:id', function(req, res) {
 
 });
 
-router.get('/profile', middlewareObj.isLoggedIn, function(req, res) {
-	Post.find().sort({ created_at: -1 }).exec(function(err, posts) {
-		if (err) {
-			req.flash('error', err.message);
-			return res.redirect('/blog');
-		}
-
-		res.render('blog/profile', { posts: posts });
-	});
-});
 
 router.get('/post/new', middlewareObj.isLoggedIn, function(req, res) {
 	Category.find().sort({ name: 1 }).exec(function(err, categories){

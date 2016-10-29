@@ -5,7 +5,8 @@ var express = require('express'),
   	Post = require('../models/Post'),
   	Category = require('../models/Category'),
   	nodemailer = require('nodemailer'),
-  	config = require('../config.json');
+  	config = require('../config.json'),
+    middlewareObj = require('../middlewares');
 
 
 /* GET home page. */
@@ -28,6 +29,18 @@ router.get('/blog', function(req, res) {
 		}
 
 		res.redirect('/blog/00');
+	});
+});
+
+
+router.get('/aplicacion', middlewareObj.isLoggedIn, function(req, res) {
+	Post.find().sort({ created_at: -1 }).exec(function(err, posts) {
+		if (err) {
+			req.flash('error', err.message);
+			return res.redirect('/blog');
+		}
+
+		res.render('blog/aplicacion', { posts: posts });
 	});
 });
 
@@ -118,7 +131,7 @@ router.get('/contacto/enviado', function(req, res, next) {
 			return res.redirect('/blog');
 		}
 
-		res.render('navigation/contacto/enviado', { posts: posts });
+		res.render('navigation/enviado', { posts: posts });
 	});
 });
 
