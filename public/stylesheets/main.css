@@ -46,6 +46,7 @@ body {
 .blog {
   position: fixed;
   height: 100%;
+  width: 25%;
   background: rgba(63, 136, 143, 0.3);
   display: none;
   justify-content: center;
@@ -69,12 +70,14 @@ body {
   align-items: center;
   font-size: 1.1em;
   padding: 0px 15px;
+
 }
 
 .blog ul span {
-  font-size: 1.5em;
+  font-size: 1.7em;
   padding: 25px;
-  color: orange;
+  color: red;
+  font-weight: bold;
 }
 
 .blog ul li {
