@@ -107,8 +107,8 @@ router.post('/enviado', function(req, res, next) {
 		from: 'Enmanuel <enma_martinez@hotmail.com>',
 		to: config.nodemailer.email,
 		subject: 'Website Submission',
-		text: 'You have a new submission with following details... Name: '+ req.body.name + ' Email: '+ req.body.email+ ' Message: '+req.body.message,
-		html: '<p>You got a new submission with the following details...</p><ul><li>Name: '+req.body.name+'</li><li>Email: '+req.body.email+'</li><li>Message: '+req.body.message+'</li></ul>'
+		text: 'You have a new submission with following details... '+ req.body.asunto + ' Name: '+ req.body.name + ' Email: '+ req.body.email+ ' Message: '+req.body.message,
+		html: '<p>You got a new submission with the following details...</p><ul><li>'+req.body.asunto+'</li><li>Name: '+req.body.name+'</li><li>Email: '+req.body.email+'</li><li>Message: '+req.body.message+'</li></ul>'
 	};
 
 	transporter.sendMail(mailOptions, function(error, info){
