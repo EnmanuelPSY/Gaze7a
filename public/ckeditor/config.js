@@ -9,4 +9,9 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.uiColor = '#AADC6E';
 	config.height = 600;
 	config.language = 'es';
+  config.youtube_related = false;
+  config.youtube_width = '100%';
+  config.youtube_height = '480';
+  config.startupOutlineBlocks = true;
+
 };
