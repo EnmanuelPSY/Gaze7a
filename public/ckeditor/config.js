@@ -13,5 +13,5 @@ CKEDITOR.editorConfig = function( config ) {
   config.youtube_width = '100%';
   config.youtube_height = '480';
   config.startupOutlineBlocks = true;
-
+  config.extraPlugins = 'image';
 };
